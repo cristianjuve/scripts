@@ -1,0 +1,5 @@
+
+while read line
+do
+  aws s3api create-bucket --bucket $line --region 
+done < "${1:-/dev/stdin}"
